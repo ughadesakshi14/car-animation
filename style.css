@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* this tag will help to hidden the overflow of the body i.e
+ it will hwlp to hide the scroll bar and some other important 
+ but unwanted activities  */
+body{          
+    overflow: hidden;
+    animation: Shakebody 5s linear infinite;
+}     
+
+.sky {
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.trees {
+    height: 70vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover;
+    position: absolute;
+}
+
+.track {
+    height: 60vh;
+    width: 1000vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: CarMovement 10s linear infinite;
+}
+
+
+.car {
+    height: 100px;
+    width: 400px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 480px;
+    bottom: 200px;
+    animation: Shake 2s linear infinite;
+}
+
+.wheel_1 img{
+    width: 80px;
+    position: relative;
+    top: 40px;
+    left: 45px;
+    animation: WheelRotations  .6s linear infinite;
+}
+
+.wheel_2 img{
+    width: 80px;
+    position:relative;  
+    top: -2vw;
+    left: 250px;
+    animation: WheelRotations  .6s linear infinite;
+}
+
+
+@keyframes WheelRotations {
+    100%{
+          transform: rotate(360deg);
+    }
+}
+
+@keyframes CarMovement {
+    100%{
+          transform: translateX(-500vw);
+    }
+}
+
+@keyframes Shake {
+    0%{
+          transform: translateY(-5px);
+    }
+
+    50%{
+        transform: translateY(5px);
+    }
+
+   100%{
+    transform: translateY(-5px);
+   }
+}
+
+
+@keyframes Shakebody {
+    0%{
+          transform: translateY(-50px);
+    }
+
+    50%{
+        transform: translateY(50px);
+    }
+
+   100%{
+    transform: translateY(-50px);
+   }
+}
